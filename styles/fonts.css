@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&display=swap');
+
+
+:root {
+    --font-text: 'Roboto', sans-serif;
+    --font-title: "Merriweather", serif;
+
+    /* Base font size */
+    --font-size-base: 1rem;  /* 16px par défaut */
+    
+    /* Padding */
+    --padding-small: 0.5rem;   /* 8px */
+    --padding-medium: 1rem;    /* 16px */
+    --padding-large: 2rem;     /* 32px */
+    
+    /* Margin */
+    --margin-small: 0.5rem;    /* 8px */
+    --margin-medium: 1rem;     /* 16px */
+    --margin-large: 2rem;      /* 32px */
+    
+    /* Font sizes using clamp() */
+    --font-size-xs: clamp(1rem, 2vw + 1rem, 1.25rem);   /* min 16px, max 20px */
+    --font-size-sm: clamp(1.25rem, 2vw + 1.25rem, 1.5rem);  /* min 20px, max 24px */
+    --font-size-md: clamp(1.5rem, 2vw + 1.5rem, 1.75rem);      /* min 24px, max 28px */
+    --font-size-lg: clamp(1.75rem, 2vw + 2rem, 2.25rem);  /* min 28px, max 36px */
+    --font-size-xl: clamp(2.25rem, 2vw + 2.5rem, 3rem);    /* min 36px, max 48px */
+    --font-size-xxl: clamp(3rem, 2vw + 3rem, 4rem);     /* min 48px, max 64px */
+}
