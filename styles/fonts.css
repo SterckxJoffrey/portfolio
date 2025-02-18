@@ -10,20 +10,21 @@
     --font-size-base: 1rem;  /* 16px par défaut */
     
     /* Padding */
-    --padding-small: 0.5rem;   /* 8px */
-    --padding-medium: 1rem;    /* 16px */
-    --padding-large: 2rem;     /* 32px */
+    --padding-small: 0.5rem;   
+    --padding-medium: 1rem;    
+    --padding-large: 2rem;     
     
     /* Margin */
-    --margin-small: 0.5rem;    /* 8px */
-    --margin-medium: 1rem;     /* 16px */
-    --margin-large: 2rem;      /* 32px */
+    --margin-small: 0.5rem;    
+    --margin-medium: 1rem;     
+    --margin-large: 2rem;      
     
     /* Font sizes using clamp() */
-    --font-size-xs: clamp(1rem, 2vw + 1rem, 1.25rem);   /* min 16px, max 20px */
-    --font-size-sm: clamp(1.25rem, 2vw + 1.25rem, 1.5rem);  /* min 20px, max 24px */
-    --font-size-md: clamp(1.5rem, 2vw + 1.5rem, 1.75rem);      /* min 24px, max 28px */
-    --font-size-lg: clamp(1.75rem, 2vw + 2rem, 2.25rem);  /* min 28px, max 36px */
-    --font-size-xl: clamp(2.25rem, 2vw + 2.5rem, 3rem);    /* min 36px, max 48px */
-    --font-size-xxl: clamp(3rem, 2vw + 3rem, 4rem);     /* min 48px, max 64px */
+    --font-size-xs: clamp(0.9rem, 2vw + 1rem, 1.35rem);   
+    --font-size-sm: clamp(1rem, 2vw + 1.25rem, 1.6rem);    
+    --font-size-md: clamp(1.2rem, 2vw + 1.5rem, 1.9rem);   
+    --font-size-lg: clamp(1.4rem, 2vw + 2.1rem, 2.5rem);   
+    --font-size-xl: clamp(1.8rem, 2vw + 2.6rem, 3.2rem);   
+    --font-size-xxl: clamp(2.6rem, 2vw + 3.1rem, 4.2rem);  
+    
 }

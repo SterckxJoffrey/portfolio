@@ -1,7 +1,6 @@
 @import url('styles/fonts.css');
 @import url('styles/colors.css');
 
-
 * {
     padding: 0;
     margin: 0;
@@ -16,44 +15,52 @@ html, body {
 }
 
 nav {
-    position: fixed; /* Fixe la barre, elle ne fait plus partie du flux */
+    position: fixed;
     top: 0;
-    left: 40%;
-    width: 60%;
+    left: 0;
+    width: 100%;
     height: 60px; /* Hauteur de la navbar */
     display: flex;
-    flex-direction: column;
-    z-index: 1000; /* S'assure que la navbar est au-dessus des sections */
+    justify-content: flex-end;
+    align-items: center;
+    background: linear-gradient(to right, rgba(135, 206, 235, 0.1), rgba(255, 255, 255, 0.1)); /* Dégradé bleu clair à blanc avec opacité faible */
+    z-index: 1000;    z-index: 1000;
 }
 
 nav ul {
+    
     display: flex; /* Affiche les éléments de la liste en ligne */
-    justify-content: space-around;
-    align-items: center;
-    padding: var(--padding-small); /* Retire le padding par défaut */
-    margin: var(--margin-small); /* Retire les marges */
+    /* justify-content: flex-end;
+    align-items: center; */
+    justify-content: space-between; /* Espaces égaux entre les éléments */
+
+    padding: var(--padding-medium);
+    margin: var(--margin-small);
+     width: 60%;
+
 }
 
 nav li {
-    list-style: none; /* Retire les puces */
-    margin-right: 20px; /* Ajoute un espace entre les éléments */
+    list-style: none;
+    margin-right: 20px;
 }
 
 nav a {
-    text-decoration: none; /* Enlève le soulignement des liens */
+    text-decoration: none;
     color: var(--color-third);
     transition: color 0.3s ease;
+    font-size: var(--font-size-sm); /* Utilisation de la variable pour la taille de police */
 }
 
 .main_contenair {
-    height: 100vh; /* Pleine hauteur de la fenêtre */
-    width: 100vw;  /* Pleine largeur de la fenêtre */
+    height: 100vh;
+    width: 100vw;
     z-index: -10;
     font-family: var(--font-text);
 }
 
 .top_container {
-    height: 80%;  /* Prend 80% de la hauteur de .main_contenair */
+    height: 80%;
     width: 100vw;
     background-color: var(--color-background);
     z-index: 0;
@@ -75,12 +82,12 @@ nav a {
 }
 
 .title {
-    font-size: var(--font-size-xxl);
+    font-size: var(--font-size-xxl); /* Utilisation de la variable pour la taille de police */
     font-family: var(--font-title);
 }
 
 .subtitle {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-xl); /* Utilisation de la variable pour la taille de police */
     font-weight: normal;
     padding-bottom: var(--padding-medium);
     padding-top: var(--padding-small);
@@ -94,29 +101,29 @@ nav a {
     color: var(--color-first);
     border-radius: 50%;
     font-weight: 900;
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-lg); /* Utilisation de la variable pour la taille de police */
     font-style: italic;
 }
 
 .bottom_container {
     height: 20vh;
     width: 100%;
-    display: flex; /* Active Flexbox */
-    align-items: center; /* Centre verticalement */
-    justify-content: center; /* Centre horizontalement */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .arrow {
-    width: 80px;  /* Augmenté pour une meilleure visibilité */
+    width: 80px;
     height: 80px;
-    color: var(--color-background); /* Gère la couleur en CSS */
+    color: var(--color-background);
 }
 
 .second_contenair {
     height: 100vh;
     width: 100%;
     background: linear-gradient(135deg, var(--color-background) 90%, white 10%);
-    padding-top: var(--padding-large); /* Ajoute du padding en haut */
+    padding-top: var(--padding-large);
 }
 
 .about_me {
@@ -130,7 +137,7 @@ nav a {
 
 .title_about {
     color: var(--color-second);
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-lg); /* Utilisation de la variable pour la taille de police */
     font-weight: normal;
     padding: var(--padding-small);
 }
@@ -162,10 +169,10 @@ nav a {
     align-items: center;
     justify-content: center;
     color: var(--color-second);
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-lg); /* Utilisation de la variable pour la taille de police */
     font-weight: normal;
     padding: var(--padding-medium);
-    padding-top: 8rem;
+    padding-top: 4.5rem;
 }
 
 .skill {
@@ -173,10 +180,10 @@ nav a {
 }
 
 .skill span {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-sm); /* Utilisation de la variable pour la taille de police */
     font-weight: bold;
     display: block;
-    margin-bottom: 5px;
+    padding: var(--padding-small);
     color: var(--color-third);
 }
 
@@ -184,7 +191,7 @@ nav a {
     background-color: var(--color-third);
     border-radius: 10px;
     width: 100%;
-    height: 30px;
+    height: 40px;
     position: relative;
 }
 
@@ -207,25 +214,129 @@ nav a {
     text-align: center;
 }
 
-/* Couleurs et valeurs de progression */
+/* Progression des compétences */
 .html {
     background-color: var(--color-second);
-    width: 90%; /* 90% de compétence */
+    width: 90%;
 }
 
 .css {
     background-color: var(--color-second);
-    width: 80%; /* 80% de compétence */
+    width: 80%;
 }
 
 .js {
     background-color: var(--color-second);
-    color: black; /* Texte noir pour contraste */
-    width: 70%; /* 70% de compétence */
+    color: black;
+    width: 70%;
 }
 
 .fourth_container {
     width: 100%;
     height: 100vh;
     background: linear-gradient(135deg, var(--color-background) 0% 20%, white 20% 100%);
+}
+
+
+
+
+/* Media Query pour mobile */
+@media (max-width: 768px) {
+    nav {
+        left: 0%; /* Réduit la largeur de la navbar */
+        width: 100%;
+        height: 60px; /* Réduit la hauteur de la navbar */
+    }
+    nav a {
+       
+        font-size: var(--font-size-xs); /* Utilisation de la variable pour la taille de police */
+    }
+    nav ul {
+    
+         width: 100%;
+    
+    }
+    .main_contenair {
+        height: 100vh; /* Assure que la section reste à 100vh */
+        
+    }
+
+    .top_container {
+        height: 80%;  /* Réduit la hauteur du top container */
+        border-bottom-right-radius: 0%;
+        border-bottom-left-radius: 0%;
+        
+    }
+
+    .title {
+        font-size: calc(var(--font-size-xxl) - 1rem); /* Ajuste la taille du titre */
+    }
+
+    .subtitle {
+        font-size: calc(var(--font-size-lg) - 0.6rem); /* Ajuste la taille du sous-titre */
+        margin-top: var(--margin-small);
+    }
+
+    .button {
+        font-size: calc(var(--font-size-lg) - 0.6rem); /* Réduit la taille de la police du bouton */
+        margin-top: var(--margin-large);
+        
+    }
+
+    .second_contenair {
+        height: 100vh; /* Assure que la section reste à 100vh */
+        padding-top: calc(var(--padding-large) - 1rem); /* Réduit le padding */
+    }
+
+    .about_me {
+        padding: calc(var(--padding-large) - 1rem);
+        margin: calc(var(--margin-large) - 1rem);
+    }
+
+    .title_about {
+        font-size: calc(var(--font-size-lg) - 0.5rem); /* Réduit la taille de la police */
+    }
+
+    .content_about {
+        padding: calc(var(--padding-large) - 1rem); /* Réduit le padding */
+    }
+
+    .skills {
+        max-width: 90%; /* Augmente la largeur pour mieux s'adapter */
+        padding: calc(var(--padding-medium) - 0.8rem); /* Réduit le padding */
+    }
+
+    .content_skills h2 {
+        font-size: calc(var(--font-size-lg) - 0.5rem); /* Réduit la taille du titre */
+        padding-top: 4rem; /* Réduit le padding supérieur */
+    }
+
+    .skill {
+        margin: calc(var(--margin-small) - 0.4rem) 0; /* Réduit la marge */
+    }
+
+    .bar {
+        height: 25px; /* Réduit la hauteur de la barre */
+    }
+
+    .progress {
+        font-size: calc(var(--font-size-sm) - 0.4rem); /* Réduit la taille de la police de la progression */
+    }
+
+    .percentage {
+        font-size: calc(var(--font-size-xs) - 0.4rem); /* Réduit la taille de la police du pourcentage */
+    }
+    .second_contenair {
+        
+        background: var(--color-background);
+        
+    }
+    .third_container {
+        background: linear-gradient(90deg, var(--color-background) 55%, white 45%);
+        
+    }
+    .fourth_container {
+      
+        background: white;
+    }
 }
